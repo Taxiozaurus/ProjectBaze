@@ -1,0 +1,391 @@
+
+*
+{
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box;
+  	z-index:0;
+  	padding:0px;
+  	margin:0 0;
+  	font-family:Helvetica, Arial;
+}
+
+/*******************************theGrit**********************************/
+.split-50, .split-20, .split-80, .split-30, .split-60, .split-70, .split-40, .split-90, .split-10, .full-size, .crack-50, .crack-20, .crack-80, .crack-30, .crack-60, .crack-70, .crack-40, .crack-90, .crack-10
+{
+	width:100%;
+	desplay:inline-block;
+}
+div.split-50, div.split-20, div.split-80, div.split-30, div.split-60, div.split-70, div.split-40, div.split-90, div.split-10, div.full-size, div.crack-50, div.crack-20, div.crack-80, div.crack-30, div.crack-60, div.crack-70, div.crack-40, div.crack-90, div.crack-10
+{
+	padding:0.5em;
+}
+.centered
+{
+	margin:0 auto;
+}
+/****************************************************************************/
+
+a
+{
+	text-decoration:none;
+	color:#555;
+}
+
+a:hover
+{
+	color:#eee;
+}
+
+a.button
+{
+	display:inline-block;
+	padding:0.5em;
+	background-color:#888;
+	color:#333;
+}
+a.button:hover
+{
+	background-color:rgba(0,0,0,30);
+	color:white;
+}
+a.button.fill
+{
+	width:100%;
+	min-height: 3.5em;
+}
+
+.fll
+{
+	float:left;
+}
+
+.flr
+{
+	float:right;
+}
+/********************************SideNav**********************/
+#bh a.button img
+{
+	height:3em;
+}
+#bh a.button
+{
+	background-color:#bbb;
+	display:inline-block;
+	height:3em;
+	position:fixed;
+	top:0px;
+	left:0px;
+	padding:0px;
+}
+#sideNav
+{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin-top:3em;
+	z-index:1000;
+	height:100%;
+	height:100vh;
+	width:80%;
+	max-width:250px;
+	background-color:#555;
+	padding:0.4em;
+	color:#bbb;
+	border-right:1px solid black;
+	-webkit-transition: transform 0.3s, background-color 0.5s;
+	-moz-transition: transform 0.3s, background-color 0.5s;
+	-o-transition: transform 0.3s, background-color 0.5s;
+	transition: transform 0.3s, background-color 0.5s;
+}
+.side-offset
+{
+	-moz-transform:    translateX(-250px);
+    -o-transform:      translateX(-250px);
+    -webkit-transform: translateX(-250px);
+    transform:         translateX(-250px);
+}
+.nav-base
+{
+	overflow:hidden;
+	position:fixed;
+	top:0px;
+}
+#sideNav ul li
+{
+	width:100%;
+	list-style: none;
+	min-height:2em;
+	padding:0.5em;
+	border-bottom:1px solid #777;
+	font-size:1.3em;
+}
+#sideNav li:hover, #sideNav li a:hover
+{
+	background-color:#34495e;
+	color:#eee;
+}
+.dark
+{
+	background-color:#555;
+}
+
+/********************************************************/
+
+/********************************************************/
+
+
+
+#bh
+{
+	height:3em;
+	background-color: #bbb;
+	position:fixed;
+	top:0px;
+	left:0px;
+}
+/******************************************************************/
+body
+{
+	background-color: #333;
+	height:100%;
+	min-height:100%;
+	min-height:100vh;
+}
+
+#wrapper
+{
+	padding:0px;
+	min-height:100%;
+	min-height:100vh;
+	margin-bottom:-80px;
+	padding-bottom:80px;
+}
+
+.body
+{
+	color: #ddd;
+	margin-top: 3em;
+}
+
+.body nav
+{
+	border-bottom:1px solid #777;
+}
+
+.body nav, .body section
+{
+	padding:0.4em;
+}
+
+footer
+{
+	min-height:80px;
+	background-color:#bbb;
+	clear:both;
+}
+
+footer div
+{
+	padding:0.4em;
+}
+
+
+@media screen and (min-width:38em) /*crackup*/
+{
+	#bh
+	{
+		height:4em;
+	}
+
+	#bh a.button,
+	#bh a.button img
+	{
+		height:4em;
+	}
+
+
+	#sideNav
+	{
+		margin-top:4em;
+	}
+
+	.body
+	{
+		margin-top:4em;
+	}
+}
+@media screen and (min-width:69em)
+{
+	.body nav
+	{
+		border-right: 1px solid #777;
+		border-bottom:none;
+	}
+}
+
+
+@media screen and (min-width:38em) /*theGrit Micro by taxiozaurus*/
+{
+	.crack-50, .crack-20, .crack-80, .crack-30, .crack-60, .crack-70, .crack-40
+	{
+		float:left;
+	}
+	.crack-10
+	{
+		width:10%;
+	}
+	.crack-20
+	{
+		width:20%;
+	}
+	.crack-30
+	{
+		width:30%;
+	}
+	.crack-40
+	{
+		width:40%;
+	}
+	.crack-60
+	{
+		width:60%;
+	}
+	.crack-70
+	{
+		width:70%;
+	}
+	.crack-80
+	{
+		width:80%;
+	}
+	.crack-90
+	{
+		width:90%;
+	}
+	.crack-50
+	{
+		width:50%;
+	}
+	
+	.crack-10.centered
+	{
+		margin-left:45%;
+	}
+	.crack-20.centered
+	{
+		margin-left:40%;
+	}
+	.crack-30.centered
+	{
+		margin-left:35%;
+	}
+	.crack-40.centered
+	{
+		margin-left:30%;
+	}
+	.crack-60.centered
+	{
+		margin-left:20%;
+	}
+	.crack-70.centered
+	{
+		margin-left:15%;
+	}
+	.crack-80.centered
+	{
+		margin-left:10%;
+	}
+	.crack-90.centered
+	{
+		margin-left:5%;
+	}
+	.crack-50.centered
+	{
+		margin-left:25%;
+	}
+}
+@media screen and (min-width:69em) /*theGrit Largo by taxiozaurus*/
+{
+	.split-50, .split-20, .split-80, .split-30, .split-60, .split-70, .split-40
+	{
+		float:left;
+	}
+	.split-10
+	{
+		width:10%;
+	}
+	.split-20
+	{
+		width:20%;
+	}
+	.split-30
+	{
+		width:30%;
+	}
+	.split-40
+	{
+		width:40%;
+	}
+	.split-60
+	{
+		width:60%;
+	}
+	.split-70
+	{
+		width:70%;
+	}
+	.split-80
+	{
+		width:80%;
+	}
+	.split-90
+	{
+		width:90%;
+	}
+	.split-50
+	{
+		width:50%;
+	}
+	
+	.split-10.centered
+	{
+		margin-left:45%;
+	}
+	.split-20.centered
+	{
+		margin-left:40%;
+	}
+	.split-30.centered
+	{
+		margin-left:35%;
+	}
+	.split-40.centered
+	{
+		margin-left:30%;
+	}
+	.split-60.centered
+	{
+		margin-left:20%;
+	}
+	.split-70.centered
+	{
+		margin-left:15%;
+	}
+	.split-80.centered
+	{
+		margin-left:10%;
+	}
+	.split-90.centered
+	{
+		margin-left:5%;
+	}
+	.split-50.centered
+	{
+		margin-left:25%;
+	}
+}
