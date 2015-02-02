@@ -1,4 +1,6 @@
-
+/*
+ProjectBaze default css
+*/
 *
 {
 	-webkit-box-sizing: border-box;
@@ -14,7 +16,7 @@
 .split-50, .split-20, .split-80, .split-30, .split-60, .split-70, .split-40, .split-90, .split-10, .full-size, .crack-50, .crack-20, .crack-80, .crack-30, .crack-60, .crack-70, .crack-40, .crack-90, .crack-10
 {
 	width:100%;
-	desplay:inline-block;
+	display:inline-block;
 }
 div.split-50, div.split-20, div.split-80, div.split-30, div.split-60, div.split-70, div.split-40, div.split-90, div.split-10, div.full-size, div.crack-50, div.crack-20, div.crack-80, div.crack-30, div.crack-60, div.crack-70, div.crack-40, div.crack-90, div.crack-10
 {
@@ -128,10 +130,6 @@ a.button.fill
 {
 	background-color:#34495e;
 	color:#eee;
-}
-.dark
-{
-	background-color:#555;
 }
 
 /********************************************************/
@@ -388,4 +386,8 @@ footer div
 	{
 		margin-left:25%;
 	}
+}
+#bh a.button.dark
+{
+	background-color:#555;
 }
