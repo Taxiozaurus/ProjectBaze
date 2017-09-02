@@ -1,0 +1,257 @@
+/*
+ * Variables
+ */
+@color-links: #555;
+@color-links-hover: white;
+@color-button-background-hover: rgba(0, 0, 0, 30);
+@color-nav-list-background-hover: #34495e;
+@color-nav-background: #555;
+@color-nav-text: #bbb;
+@color-border-default: black;
+@color-border-light: #777;
+@color-body-background: #333;
+@color-body-text: #ddd;
+
+@breakpoint-crack: 38em;
+@breakpoint-split: 69em;
+
+/*
+ * Page Prepare
+ */
+* {
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box;
+  	z-index: 0;
+  	padding: 0px;
+  	margin: 0 0;
+  	font-family: Helvetica, Arial;
+}
+
+body
+{
+	background-color: @color-body-background;
+	color: @color-body-text;
+	height: 100%;
+	min-height: 100%;
+	min-height: 100vh;
+	
+	nav {
+		border-bottom:1px solid @color-border-light;
+	}
+
+	nav, section {
+		padding: 0.4em;
+	}
+
+	footer {
+		min-height: 80px;
+		background-color: @color-nav-text;
+		clear: both;
+		div {
+			padding: 0.4em;
+		}
+	}
+}
+
+#wrapper {
+	padding: 0px;
+	padding-top: 3em;
+	min-height: 100%;
+	min-height: 100vh;
+	margin-bottom: -80px;
+	padding-bottom: 80px;
+}
+
+/*
+ * Typography
+ */
+a {
+	text-decoration: none;
+	color: @color-links;
+	&:hover {
+		color: @color-links-hover;
+	}
+
+	&.button{
+		&:hover {
+			background-color: @color-button-background-hover;
+			color: @color-links-hover
+		}
+		&.fill {
+			width: 100%;
+			min-height: 3.5em;
+		}
+	}
+}
+
+/*
+ * Side Nav
+ */
+#sideNav {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin-top: 3em;
+	z-index: 1000;
+	height: 100%;
+	height: 100vh;
+	width: 80%;
+	max-width: 250px;
+	background-color: @color-nav-background;
+	padding: 0.4em;
+	color: @color-nav-text;
+	border-right: 1px solid @color-border-default;
+	-webkit-transition: transform 0.3s, background-color 0.5s;
+	-moz-transition: transform 0.3s, background-color 0.5s;
+	-o-transition: transform 0.3s, background-color 0.5s;
+	transition: transform 0.3s, background-color 0.5s;
+
+	&.side-offset {
+		-webkit-transform: translateX(-250px);
+		-moz-transform: translateX(-250px);
+		-o-transform: translateX(-250px);
+		transform: translateX(-250px);
+	}
+
+	&.nav-base {
+		overflow: hidden;
+		position: fixed;
+		top: 0px;
+	}
+
+	ul {
+		li {
+			width: 100%;
+			list-style: none;
+			min-height: 2em;
+			padding: 0.5em;
+			border-bottom: 1px solid @color-border-light;
+			font-size: 1.3em;
+
+			&:hover, a:hover {
+				background-color: @color-nav-list-background-hover;
+				color: @color-links-hover;
+			}
+		}
+	}
+}
+
+/*
+ * Nav Toggle
+ */
+#bh {
+	height: 3em;
+	background-color: @color-nav-text;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	
+	a.button {
+		background-color: @color-nav-text;
+		display: inline-block;
+		height: 3em;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		padding: 0px;
+
+		&.dark {
+			background-color: @color-nav-background;
+		}
+		
+		img {
+			height: 3em;
+		}
+	}
+}
+
+/*
+ * Layout
+ */
+ .fil {
+	float: left;
+}
+.fir {
+	float: right;
+}
+.cls {
+	clear: both;
+}
+
+@media screen and (min-width: @breakpoint-crack) {
+	#bh {
+		height: 4em;
+		a.button, a.button img {
+			height: 4em;
+		}
+	}
+
+	#sideNav {
+		margin-top: 4em;
+	}
+
+	#wrapper {
+		padding-top: 4em;
+	}
+}
+
+@media screen and (min-width: @breakpoint-split) {
+	body nav
+	{
+		border-right: 1px solid @color-border-light;
+		border-bottom: none;
+	}
+}
+
+/*
+ * the Grit
+ */
+.full-size, 
+.split-10, .split-20, .split-30, .split-40, .split-50, .split-60, .split-70, .split-80, .split-90, 
+.crack-10, .crack-20, .crack-30, .crack-40, .crack-50, .crack-60, .crack-70, .crack-80, .crack-90 {
+	 width: 100%;
+	 display: inline-block;
+}
+ 
+div.full-size, 
+div.split-10, div.split-20, div.split-30, div.split-40, div.split-50, div.split-60, div.split-70, div.split-80, div.split-90, 
+div.crack-10, div.crack-20, div.crack-30, div.crack-40, div.crack-50, div.crack-60, div.crack-70, div.crack-80, div.crack-90 {
+	 padding: 0.5em;
+}
+ 
+.centered
+{
+	 margin: 0 auto;
+}
+
+@media screen and (min-width: @breakpoint-crack) {
+	.crack-loop (@i) when (@i > 0) {
+		.crack-@{i} {
+			width: ~"@{i}%";
+			float: left;
+			&.centered {
+				margin-left: (100% - @i) / 2;
+			}
+		}
+		.crack-loop(@i - 10);
+	}
+	.crack-loop(90);
+}
+
+@media screen and (min-width: @breakpoint-split) {
+	.split-loop (@i) when (@i > 0) {
+		.split-@{i} {
+			width: ~"@{i}%";
+			float: left;
+			&.centered {
+				margin-left: (100% - @i) / 2;
+			}
+		}
+		.split-loop(@i - 10);
+	}
+	.split-loop(90);
+}
